@@ -16,9 +16,14 @@
       <li class="nav-item">
         <ul class="list-unstyled">
           <li>
-            <span class="username">
+            <span class="username" *ngIf="isUser; else elseBlock">
               <strong>{{user.gerenteRelacion}}</strong>
             </span>
+            <ng-template #elseBlock>
+              <span class="username">
+                <strong>Sin información</strong>
+              </span>
+            </ng-template>
           <li>
             <span class="text-muted">Gerente de Relación</span>
           </li>
@@ -50,12 +55,20 @@
           <fa-icon [icon]="faArrowLeft" style="color: #0d6efd;"></fa-icon>
         </button>
       </div>
-      <div class="col-12 mx-auto justify-content-center">
+      <div class="col-12 mx-auto justify-content-center" *ngIf="isUser; else elseBlockDiv">
         <h3 class="fw-normal text-center"><strong>{{user.nombre}}</strong></h3>
         <p class="lead fw-lighter text-center text-muted">NIT: {{user.nit}}</p>
         <p class="lead fw-bold fs-6 text-center"><strong>Capa:</strong> {{user.capa}} <strong>Segmento:</strong>
           {{user.segmento}}</p>
       </div>
+      <ng-template #elseBlockDiv>
+        <div class="col-12 mx-auto justify-content-center">
+          <h3 class="fw-normal text-center"><strong>Sin información</strong></h3>
+          <p class="lead fw-lighter text-center text-muted">NIT: Sin información</p>
+          <p class="lead fw-bold fs-6 text-center"><strong>Capa:</strong> Sin información <strong>Segmento:</strong>
+            Sin información</p>
+        </div>
+      </ng-template>
       <hr class="d-block d-sm-none ">
       <div class="col-12 d-none d-sm-block">
         <nav class="justify-content-center nav-fill mb-3">

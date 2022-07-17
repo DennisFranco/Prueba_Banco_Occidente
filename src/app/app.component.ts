@@ -15,14 +15,15 @@ export class AppComponent {
   faBars = faBars;
   faCircleExclamation = faCircleExclamation;
   user: any = null; // Información del usuario
+  public isUser = false;
 
   constructor(private Service: Service) { }
 
   ngOnInit() {
-    this.Service.getItems("800220154").subscribe(
+    this.Service.getItemById("800220154").subscribe(
       (response) => {
-        console.log(response.Items[0]);
-        this.user = response.Items[0];
+        this.user = response.Item;
+        this.isUser = true;
       },
       (error) => {
         console.log('error', error.error);

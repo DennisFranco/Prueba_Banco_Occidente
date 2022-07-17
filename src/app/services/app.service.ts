@@ -13,8 +13,14 @@ export class Service {
 
     constructor(private http: HttpClient) { }
 
-    getItems(data: any): Observable<any> {
+    getItems(): Observable<any> {
         var url = this.URL + 'items';
+        // return this.http.get<any>(url, { headers: new HttpHeaders({ "Content-Type": "application/json" }) });
+        return this.http.get<any[]>(url);
+    }
+
+    getItemById(data: any): Observable<any> {
+        var url = this.URL + 'items/' + data;
         // return this.http.get<any>(url, { headers: new HttpHeaders({ "Content-Type": "application/json" }) });
         return this.http.get<any[]>(url);
     }
