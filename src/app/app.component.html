@@ -1,0 +1,154 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+  <button class="btn d-xl-none" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <fa-icon [icon]="faArrowLeft" style="color: #0d6efd;"></fa-icon>
+  </button>
+  <a class="navbar-brand" href="#">
+    <img src="./assets/img/logo.png" width="200" height="50" class="d-inline-block align-top" alt="">
+  </a>
+  <button class="btn d-xl-none" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <fa-icon [icon]="faBars" style="color: #0d6efd;"></fa-icon>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+    <ul class="nav">
+      <li class="nav-item">
+        <ul class="list-unstyled">
+          <li>
+            <span class="username">
+              <strong>{{user.gerenteRelacion}}</strong>
+            </span>
+          <li>
+            <span class="text-muted">Gerente de Relación</span>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown mx-4">
+          <a href="#" class="d-block link-primary text-decoration-none dropdown-toggle" id="dropdownUser2"
+            data-bs-toggle="dropdown" aria-expanded="false">
+
+            <img src="./assets/img/default-profile.png" alt="mdo" width="50" height="50" class="rounded-circle">
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser2">
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-sm-10 col-12">
+    <div class="row px-2">
+      <div class="col-12 mx-auto justify-content-start d-none d-xl-block">
+        <button class="btn" type="button">
+          <fa-icon [icon]="faArrowLeft" style="color: #0d6efd;"></fa-icon>
+        </button>
+      </div>
+      <div class="col-12 mx-auto justify-content-center">
+        <h3 class="fw-normal text-center"><strong>{{user.nombre}}</strong></h3>
+        <p class="lead fw-lighter text-center text-muted">NIT: {{user.nit}}</p>
+        <p class="lead fw-bold fs-6 text-center"><strong>Capa:</strong> {{user.capa}} <strong>Segmento:</strong>
+          {{user.segmento}}</p>
+      </div>
+      <hr class="d-block d-sm-none ">
+      <div class="col-12 d-none d-sm-block">
+        <nav class="justify-content-center nav-fill mb-3">
+          <div class="nav nav-tabs nav-justified mb-3" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+              type="button" role="tab" aria-controls="nav-home" aria-selected="true">Operación</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+              type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Indicadores</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+              type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Iinformación Cliente </button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <h6 style="color: #0d6efd;">Indique la linea de crédito que quiere reconsiderar</h6>
+            <div class="row justify-content-center">
+              <div class="col-4 col-xs-6 my-4">
+                <div class="card text-center">
+                  <img src="./assets/img/cartera-ordinaria.png" class="card-img-top" alt="..." width="100" height="100"
+                    style="object-fit: contain;">
+                  <div class="card-body">
+                    <p class="card-text">Cartera ordinaria</p>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="#" class="text-decoration-none">Continuar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 col-xs-6 my-4">
+                <div class="card text-center disabled">
+                  <img src="./assets/img/vivienda.png" class="card-img-top" alt="..." width="100" height="100"
+                    style="object-fit: contain;">
+                  <div class="card-body">
+                    <p class="card-text">Leasing</p>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <a href="#" class="text-decoration-none">Continuar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+        </div>
+      </div>
+      <div class="col-12 d-block d-sm-none">
+        <h6 class="" style="color: #0d6efd;">Indique la linea de crédito que quiere reconsiderar</h6>
+        <div class="row ">
+          <div class="col-6 pe-2">
+            <div class="card text-center">
+              <img src="./assets/img/cartera-ordinaria.png" class="card-img-top" alt="..." width="100" height="100"
+                style="object-fit: contain;">
+              <div class="card-body px-0">
+                <p class="card-text fs-6">Cartera ordinaria</p>
+              </div>
+              <div class="card-footer text-muted">
+                <a href="#" class="text-decoration-none">Continuar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 ps-2">
+            <div class="card text-center disabled">
+              <img src="./assets/img/vivienda.png" class="card-img-top" alt="..." width="100" height="100"
+                style="object-fit: contain;">
+              <div class="card-body">
+                <p class="card-text">Leasing</p>
+              </div>
+              <div class="card-footer text-muted">
+                <a href="#" class="text-decoration-none">Continuar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 p-0 my-4">
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+          <fa-icon class="me-2" [icon]="faCircleExclamation"></fa-icon>
+          <div>
+            <p class="text-break m-0">Las demás líneas de crédito no estarán disponibles por el momento</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer
+  class="d-flex flex-wrap justify-content-xl-end justify-content-md-center justify-content-center align-items-center py-3 my-4 border-top">
+  <ul class="nav col-md-4 justify-content-xl-end justify-content-md-center list-unstyled d-flex mx-4">
+    <li class="ms-3"><a class="text-muted" href="#">
+        <img src="./assets/img/footer.png" width="100" height="30" class="d-inline-block align-top" alt="">
+      </a></li>
+  </ul>
+</footer>
+<router-outlet></router-outlet>
